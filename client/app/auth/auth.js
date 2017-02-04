@@ -30,7 +30,10 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
 
         // 토큰 이름 설정 필요
         // $window.localStorage.setItem('com.shortly', token);
-        $location.path('/');
+        if ($scope.user.username) {
+          $mdDialog.hide();
+          $location.path('/');
+        }
       // })
       // .catch(function (error) {
       //   console.error(error);
@@ -38,7 +41,6 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
   };
 
   // 로그인 모달창
-  // $scope.status = '  ';
   $scope.customFullscreen = false;
   $scope.hide = function() {
       $mdDialog.hide();
@@ -46,11 +48,6 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
 
   $scope.cancel = function() {
     $mdDialog.cancel();
-  };
-
-  $scope.answer = function(answer) {
-    console.log(answer)
-    $mdDialog.hide(answer);
   };
   
   $scope.showAdvanced = function(ev) {
@@ -62,11 +59,6 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
       clickOutsideToClose:true,
       fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
     })
-    // .then(function(answer) {
-    //   $scope.status = 'You said the information was "' + answer + '".';
-    // }, function() {
-    //   $scope.status = 'You cancelled the dialog.';
-    // });
   };
 
   // function DialogController($scope, $mdDialog) {
@@ -83,4 +75,19 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
   //   };
   // }
   
+  $scope.showAdvanced2 = function(ev) {
+    $mdDialog.show({
+      // controller: AuthController,
+      templateUrl: 'app/auth/signup-popup.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    // .then(function(answer) {
+    //   $scope.status = 'You said the information was "' + answer + '".';
+    // }, function() {
+    //   $scope.status = 'You cancelled the dialog.';
+    // });
+  };
 })
