@@ -3,13 +3,13 @@
 hyojeongson jjang
 ## TEAM
 
-  - __Product Owner__ : JinhoDo
-  - __Scrum Master__ : SeongChanChoi
-  - __Development Team Members__ : GwangHoSuk, HyonJeongSon
+  - __Product Owner__ : Jinho Do
+  - __Scrum Master__ : SeongChan Choi
+  - __Development Team Members__ : KwangHo Suk, HyonJeong Son
   
 ## Usage
 
- > blabla~~
+ > Social Newwork based on place
  
 ## Requirements
 
