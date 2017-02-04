@@ -1,4 +1,5 @@
 angular.module('HooliPlus', [
+  'HooliPlus.main',
   'ngMaterial',
   'ngRoute',
   'ngMessages'
