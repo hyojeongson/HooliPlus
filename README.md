@@ -1,5 +1,5 @@
-# HooliPlus
-SiliconValleyCoding - GreenFiled Project - HooliPlus (With JinHo, KwangHo, HyoJeong, SeongChan)
+# HooliPlus 
+:rocket: SiliconValleyCoding - GreenFiled Project - HooliPlus (With JinHo, KwangHo, HyoJeong, SeongChan)
 
 ## TEAM
 
