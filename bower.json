@@ -2,10 +2,10 @@
   "name": "HooliPlus",
   "description": "greenfield project",
   "authors": [
-    'Jinho Do',
-    'SeongChan Choi',
-    'KwangHo Suk',
-    'HyonJeong Son'
+    "Jinho Do",
+    "SeongChan Choi",
+    "KwangHo Suk",
+    "HyonJeong Son"
   ],
   "license": "MIT",
   "homepage": "https://github.com/HooliPlus/HooliPlus.git",
