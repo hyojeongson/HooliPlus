@@ -1,4 +1,5 @@
 angular.module('HooliPlus', [
+  'HooliPlus.main',
   'ngMaterial',
   'ngRoute',
   'ngMessages'
@@ -9,7 +10,7 @@ angular.module('HooliPlus', [
 
     // index.html 라우트
     .when('/', {
-      templateUrl: '../main/main.html', // 기본 레이아웃
+      templateUrl: 'app/main/main.html', // 기본 레이아웃
       controller: 'MainController'
     })
   
