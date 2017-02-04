@@ -32,6 +32,7 @@ angular.module('HooliPlus.services', [])
     });
   };
 
+  // 토큰이름 바꾸기!!!
   var isAuth = function () {
     return !!$window.localStorage.getItem('com.shortly');
   };

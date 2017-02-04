@@ -2,7 +2,7 @@
 
 <md-dialog aria-label="signin" ng-controller="AuthController">
   <form ng-cloak name="signinForm" ng-submit="signin()">
-    <md-toolbar>
+    <md-toolbar class="md-warn md-hue-2">
       <div class="md-toolbar-tools">
         <h2>SIGN IN</h2>
         <span flex></span>
@@ -35,10 +35,10 @@
 
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button class="md-raised md-warn" ng-click="cancel()">
+      <md-button class="md-accent" ng-click="cancel()">
        취소
       </md-button>
-      <md-button class="md-raised md-primary" ng-click="signin()">
+      <md-button class="md-primary md-hue-1" ng-click="signin()">
         로그인
       </md-button>
     </md-dialog-actions>
