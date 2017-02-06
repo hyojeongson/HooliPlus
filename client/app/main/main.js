@@ -1,6 +1,6 @@
 angular.module('HooliPlus.main', [])
 
-.controller('MainController', function ($scope, $timeout, $mdSidenav) {
+.controller('MainController', function ($scope, $mdSidenav) {
 	$scope.toggleLeft = buildToggler('left');
   $scope.toggleRight = buildToggler('right');
 
@@ -11,4 +11,3 @@ angular.module('HooliPlus.main', [])
       };
     }
 })
-
