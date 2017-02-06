@@ -7,37 +7,35 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
   $scope.user = {};
 
   $scope.signin = function () {
-    console.log($scope.user)
-    // Auth.signin($scope.user)
-    //   .then(function (token) {
-
-        // 토큰 이름 설정 필요
-        // $window.localStorage.setItem('com.hooliplus', token);
+    // 로그인시 아이디와 패스워드 들어 오는지 콘솔로 찍어본 부분 입니다.
+    // console.log($scope.user)
+    Auth.signin($scope.user)
+      .then(function (token) {
+        $window.localStorage.setItem('com.hooliplus', token);
         if ($scope.user.username) {
           $mdDialog.hide();
           $location.path('/');
         }
-      // })
-      // .catch(function (error) {
-      //   console.error(error);
-      // });
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
   $scope.signup = function () {
-    console.log($scope.user)
-    // Auth.signup($scope.user)
-    //   .then(function (token) {
-
-        // 토큰 이름 설정 필요
-        // $window.localStorage.setItem('com.hooliplus', token);
+    // 아이디와 패스워드 들어 오는지 콘솔로 찍어본 부분 입니다.
+    // console.log($scope.user)
+    Auth.signup($scope.user)
+      .then(function (token) {
+        $window.localStorage.setItem('com.hooliplus', token);
         if ($scope.user.username) {
           $mdDialog.hide();
           $location.path('/');
         }
-      // })
-      // .catch(function (error) {
-      //   console.error(error);
-      // });
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
   // 로그인 모달창
@@ -61,6 +59,7 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
     })
   };
 
+// 이 부분은 원래 머터리얼 다이얼로그 예제에 있던 것인데 차후에 공부를 위하여 주석으로 남겨 놨습니다.
   // function DialogController($scope, $mdDialog) {
   //   $scope.hide = function() {
   //     $mdDialog.hide();

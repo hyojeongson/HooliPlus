@@ -9,7 +9,6 @@ angular.module('HooliPlus.services', [])
   // localStorage를 순서대로 열면 서버에서 토큰을 볼 수 있습니다.
   
   
-  // FIXME:: url 수정 필요!!!!
   var signin = function (user) {
     return $http({
       method: 'POST',
@@ -32,7 +31,6 @@ angular.module('HooliPlus.services', [])
     });
   };
 
-  // 토큰이름 바꾸기!!!
   var isAuth = function () {
     return !!$window.localStorage.getItem('com.hooliplus');
   };
