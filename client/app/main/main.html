@@ -1,8 +1,48 @@
-<div>
-  main.html 이 이곳에 나타납니다.
+<div ng-controller="MainController" layout="column" style="height: 500px;" ng-cloak >
+   <md-toolbar class="md-hue-2" style="background-color:#d32f2f">
+      <div class="md-toolbar-tools" >
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <i class="material-icons" style="color: #ffffff;" ng-click="toggleLeft()">sort</i>
+        </md-button>
+        <h2 flex md-truncate>Hooli+</h2>
 
+        <form ng-submit="$event.preventDefault()" flex>
+          <md-autocomplete
+              md-items=""
+              placeholder="찾고싶은게 있으신가요?"
+              md-menu-class="autocomplete-custom-template">
+          </md-autocomplete>
+        </form>
 
-  로그인 버튼에 ng-controller="AuthController" ng-click="showAdvanced($event)"
-  가입 버튼에 ng-controller="AuthController" ng-click="showAdvanced2($event)"
-  넣어 주시면 모달창이 뜹니다.
+        <md-button class="md-icon-button" flex>
+          <i class="material-icons">face</i>
+        </md-button>
+
+      </div>
+    </md-toolbar>
+
+  <section layout="row" flex >
+    <md-sidenav class="md-sidenav-left" md-component-id="left"
+                md-disable-backdrop md-whiteframe="4">
+
+      <md-toolbar class="md-theme-indigo" style="background-color:#e53935">
+        <h1 class="md-toolbar-tools">
+          <i class="material-icons" style="color: #ffffff;" ng-click="toggleLeft()">sort</i>
+        </h1>
+      </md-toolbar>
+
+      <md-content layout-margin>
+        <p>
+          item 
+        </p>
+      </md-content>
+
+    </md-sidenav>
+
+    <md-content flex layout-padding>
+      <div layout="column" layout-align="top center">
+      </div>
+    </md-content>
+  </section>
+
 </div>
