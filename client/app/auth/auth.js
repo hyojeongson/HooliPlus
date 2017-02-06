@@ -12,7 +12,7 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
     //   .then(function (token) {
 
         // 토큰 이름 설정 필요
-        // $window.localStorage.setItem('com.shortly', token);
+        // $window.localStorage.setItem('com.hooliplus', token);
         if ($scope.user.username) {
           $mdDialog.hide();
           $location.path('/');
@@ -29,7 +29,7 @@ angular.module('HooliPlus.auth', ['ngMaterial'])
     //   .then(function (token) {
 
         // 토큰 이름 설정 필요
-        // $window.localStorage.setItem('com.shortly', token);
+        // $window.localStorage.setItem('com.hooliplus', token);
         if ($scope.user.username) {
           $mdDialog.hide();
           $location.path('/');

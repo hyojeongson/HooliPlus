@@ -34,11 +34,11 @@ angular.module('HooliPlus.services', [])
 
   // 토큰이름 바꾸기!!!
   var isAuth = function () {
-    return !!$window.localStorage.getItem('com.shortly');
+    return !!$window.localStorage.getItem('com.hooliplus');
   };
 
   var signout = function () {
-    $window.localStorage.removeItem('com.shortly');
+    $window.localStorage.removeItem('com.hooliplus');
     $location.path('/signin');
   };
 
