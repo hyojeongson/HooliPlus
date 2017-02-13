@@ -28,9 +28,8 @@
         </form>
 
         <md-button class="md-icon-button" flex  ng-controller="AuthController" ng-click="showAdvanced($event)">
-          <i class="material-icons">face</i>
+          <i class="material-icons">person_outline</i>
         </md-button>
-
       </div>
     </md-toolbar>
 
@@ -43,18 +42,19 @@
           </h1>
         </md-toolbar>
 
-        <md-content layout-margin>
-          <p>
-            item 
-          </p>
-        </md-content>
+      <md-content layout-margin>
+        <div class="hoolilist"><i class="material-icons center">home</i><span>홈</span></div>
+        <div class="hoolilist"><i class="material-icons center">library_books</i><span>소식모음</span></div>
+        <div class="hoolilist"><i class="material-icons center">supervisor_account</i><span>Hooli+ 가입</span></div>
+         <md-divider></md-divider>
+        <div class="hoolilist"><i class="material-icons center">sms_failed</i><span>의견 보내기</span></div>
+        <div class="hoolilist"><i class="material-icons center">help_outline</i><span>도움말</span></div>
+        <div class="hoolilist" ng-click="toggleLeft()"><i class="material-icons center">keyboard_backspace</i><span>닫기</span></div>
+      </md-content>
 
       </md-sidenav>
         <div ng-view></div>
-
-
   </div>
-
 
   <!--Angular-->
   <script src='lib/angular/angular.js'></script>
