@@ -4,9 +4,9 @@
         <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
           <i class="material-icons" style="color: #ffffff;" ng-click="toggleLeft()">sort</i>
         </md-button>
-        <h2 flex md-truncate>Hooli+</h2>
+        <h2 flex='25' md-truncate>Hooli+</h2>
 
-        <form ng-submit="$event.preventDefault()" flex>
+        <form ng-submit="$event.preventDefault()" flex='50'>
           <md-autocomplete
               md-items=""
               placeholder="찾고싶은게 있으신가요?"
@@ -14,8 +14,8 @@
           </md-autocomplete>
         </form>
 
-        <md-button class="md-icon-button" flex  ng-controller="AuthController" ng-click="showAdvanced($event)">
-          <i class="material-icons">face</i>
+        <md-button class="md-icon-button" flex='25'  ng-controller="AuthController" ng-click="showAdvanced($event)">
+          <i class="material-icons">person_pin</i>
         </md-button>
 
       </div>
@@ -32,9 +32,14 @@
       </md-toolbar>
 
       <md-content layout-margin>
-        <p>
-          item 
-        </p>
+        <div class="hoolilist"><i class="material-icons center">home</i><span>홈</span></div>
+        <div class="hoolilist"><i class="material-icons center">library_books</i><span>소식모음</span></div>
+        <div class="hoolilist"><i class="material-icons center">supervisor_account</i><span>Hooli+ 가입</span></div>
+         <md-divider></md-divider>
+        <div class="hoolilist"><i class="material-icons center">sms_failed</i><span>의견 보내기</span></div>
+        <div class="hoolilist"><i class="material-icons center">help_outline</i><span>도움말</span></div>
+        <div class="hoolilist" ng-click="toggleLeft()"><i class="material-icons center">keyboard_backspace</i><span>닫기</span></div>
+
       </md-content>
 
     </md-sidenav>

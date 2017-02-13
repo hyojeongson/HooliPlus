@@ -221,6 +221,25 @@ video {
     height: 0px;
 }
 
+.hoolilist{
+	font-size: 14px;
+	color: rgba(0,0,0,0.87);
+	cursor: pointer;
+	padding: 0 12px 0 20px;
+}
+.hoolilist:hover {
+	background-color: #e7e7e7;	
+}
 
+.center{
+	display:inline-block;
+	vertical-align: middle;
+	color: #757575;
+}
 
-
+.hoolilist span{
+	line-height: 50px;
+	display:inline-block;
+	vertical-align: middle;
+	padding: 0px 12px 0px 20px;
+}
