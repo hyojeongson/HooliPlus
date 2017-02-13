@@ -13,6 +13,13 @@ video {
   height: auto;
 }
 
+md-content.md-padding._md.layout-xs-column.layout-row{
+  margin-left: 250px;
+}
+md-sidenav.md-sidenav-left.ng-isolate-scope._md.md-whiteframe-4dp{
+  position: fixed;
+}
+
 .content-card {
   max-width: 530px;
   min-width: 280px;
@@ -242,4 +249,8 @@ video {
 	display:inline-block;
 	vertical-align: middle;
 	padding: 0px 12px 0px 20px;
+}
+
+md-sidenav{
+  max-width: 250px;
 }
