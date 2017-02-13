@@ -2,6 +2,7 @@ angular.module('HooliPlus', [
   'HooliPlus.auth',
   'HooliPlus.main',
   'HooliPlus.services',
+  'HooliPlus.content',
   'ngMaterial',
   'ngRoute',
   'ngMessages'
