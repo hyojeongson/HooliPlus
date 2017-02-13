@@ -15,13 +15,8 @@ angular.module('HooliPlus', [
       templateUrl: 'app/main/main.html', // 기본 레이아웃
       controller: 'MainController'
     })
-    .when('/signin', {
-      templateUrl: 'app/auth/signin.html',
-      controller: 'AuthController'
-    })
-    .when('/signup', {
-      templateUrl: 'app/auth/signup.html',
-      controller: 'AuthController'
+    .otherwise({
+      redirectTo: '/'
     })
   
     // 이후 다른 라우트 자리 들
