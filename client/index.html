@@ -11,7 +11,51 @@
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-  <div ng-view></div>
+  <div ng-controller="MainController" layout="column" style="height: 500px;" ng-cloak >
+   <md-toolbar class="md-hue-2" style="background-color:#d32f2f">
+      <div class="md-toolbar-tools" >
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <i class="material-icons" style="color: #ffffff;" ng-click="toggleLeft()">sort</i>
+        </md-button>
+        <h2 flex md-truncate>Hooli+</h2>
+
+        <form ng-submit="$event.preventDefault()" flex>
+          <md-autocomplete
+              md-items=""
+              placeholder="찾고싶은게 있으신가요?"
+              md-menu-class="autocomplete-custom-template">
+          </md-autocomplete>
+        </form>
+
+        <md-button class="md-icon-button" flex  ng-controller="AuthController" ng-click="showAdvanced($event)">
+          <i class="material-icons">face</i>
+        </md-button>
+
+      </div>
+    </md-toolbar>
+
+      <md-sidenav class="md-sidenav-left" md-component-id="left"
+                  md-disable-backdrop md-whiteframe="4">
+
+        <md-toolbar class="md-theme-indigo" style="background-color:#e53935">
+          <h1 class="md-toolbar-tools">
+            <i class="material-icons" style="color: #ffffff;" ng-click="toggleLeft()">sort</i>
+          </h1>
+        </md-toolbar>
+
+        <md-content layout-margin>
+          <p>
+            item 
+          </p>
+        </md-content>
+
+      </md-sidenav>
+        <div ng-view></div>
+
+
+  </div>
+
+
   <!--Angular-->
   <script src='lib/angular/angular.js'></script>
   <!--Angular route-->
@@ -25,7 +69,7 @@
   <script src="app/services/services.js"></script>
   <script src="app/content/content.js"></script>
   <script src="app/auth/auth.js"></script>
-  <script src="app/main/main.js"></script>
+  <script src="index.js"></script>
   <script src="app/app.js"></script> 
 </body>
 </html>
