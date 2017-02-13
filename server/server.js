@@ -16,12 +16,12 @@ require('./config/routes.js')(app, express);
 server.listen(8000); //app.listen
 
 // socket io connection
-io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
+// io.on('connection', function (socket) {
+//   socket.emit('news', { hello: 'world' });
+//   socket.on('my other event', function (data) {
+//     console.log(data);
+//   });
+// });
 
 
 // export our app for testing and flexibility, required by index.js

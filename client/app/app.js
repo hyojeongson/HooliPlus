@@ -23,6 +23,7 @@ angular.module('HooliPlus', [
     .otherwise({
       redirectTo: '/'
     })
+    
   
     // 이후 다른 라우트 자리 들
 

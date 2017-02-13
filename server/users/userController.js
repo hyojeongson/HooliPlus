@@ -41,6 +41,7 @@ module.exports = {
     findUser({username: username})
       .then(function (user) {
         if (user) {
+          console.log("USER ::: ", user);
           next(new Error('User already exist!'));
         } else {
           // make a new user if not one

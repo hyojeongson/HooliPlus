@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 var babel = require('gulp-babel');
 var nodemon = require('gulp-nodemon');
+var nodeInspector = require('gulp-node-inspector');
 var KarmaServer = require('karma').Server;
 var browserSync = require('browser-sync').create();
 
@@ -30,7 +31,10 @@ var paths = {
 gulp.task('serve', function () {
   nodemon({
     script: paths.server,
-    ignore: 'node_modules/**/*.js'
+    ignore: 'node_modules/**/*.js',
+    execMap: {
+      js: "node --inspect"
+    }
   });
 });
 
